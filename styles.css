@@ -1,0 +1,901 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    overflow-x: hidden;
+    width: 100%;
+  height: 100%;
+}
+
+/* Intro */
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;   /* 100% da largura da viewport */
+    height: 100vh;  /* 100% da altura da viewport */
+    background: black; /* fundo branco ou o que quiser */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    width: 30vw;
+    height: 200px;  
+    animation: girarMoeda 10s linear infinite;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.7));
+    margin-left: 20px;
+}
+
+@keyframes girarMoeda {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s ease-in-out;
+}
+
+/* Fundos */
+#inicio {
+    background: url('./imagens/fundo.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(80%);
+    z-index: -3;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quem-somos{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#servicos {
+    background: url('./imagens/fundo.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(80%);
+    z-index: -3;
+    padding: 40px 20px;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#servicos h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    color: white;
+}
+
+#servicos p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: white;
+}
+
+#contato {
+    position: relative;
+    z-index: 1;
+    background: rgba(3, 3, 3, 0.952);
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(80%);
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    box-shadow: 0px 40px 60px -30px rgba(255, 255, 255, 0.3);
+    height: 100vh;
+    justify-content: center;
+}
+
+#depoimentos {
+    position: relative;
+    min-height: 100vh;
+    padding: 60px 20px;
+    background: url('./imagens/fundo.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quem-somos, #depoimentos {
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+.logo img {
+    width: 120px;
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+
+.nav-menu ul {
+    display: flex;
+    justify-content: center; /* Centraliza o menu */
+    align-items: center;
+    gap: 20px; /* Espaçamento uniforme */
+    padding: 0;
+    list-style: none;
+    width: 100%; /* Garantia de alinhamento total */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Centraliza todo o menu */
+    width: 100%; /* Garante que ocupe toda a largura */
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+   
+    padding: 0;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+    transition: 0.4s ease-in-out;
+}
+
+nav ul li a:hover {
+    transform: scale(1.2);
+}
+
+.whatsapp {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  margin-right: 20px;
+}
+
+.whatsapp a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #06f55e;
+    background: transparent;
+    color: #06f55e;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.whatsapp a:hover {
+    background: #25D366;
+    color: #f4f4f4;
+}
+
+/* Texto e fotos no início */
+.text1 {
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    position: fixed; 
+    left: 8%;
+    top: 15%;
+    line-height: 1.4;
+}
+
+.seja {
+    font-size: 25px;
+    color: white;
+    position: fixed;
+    left: 25%;
+    top: 90%;
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+.fotos-container {
+    position: fixed;
+    right: 10%;
+    top: 30%;
+    width: 130px;
+}
+
+.foto {
+    position: absolute;
+    width: 200px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+.foto1 {
+    top: -35px; 
+    left: -180px;
+    z-index: 10;
+}
+
+.foto2 { 
+    top: 145px; 
+    left: -180px; 
+    z-index: 11;
+}
+
+.foto3 {
+    top: 85px; 
+    left: -60px; 
+    z-index: 15;
+}
+
+.foto4 { 
+    top: -35px; 
+    left: 10px;
+    z-index: 16;
+}
+
+.foto5 {
+    top: 155px;
+    left: 10px; 
+    z-index: 13;
+}
+
+/* Quem Somos */
+#quem-somos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.titulo {
+    position: absolute;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin: 0;
+    top: -5%;
+}
+
+.txt2 {
+    color: white;
+    font-size: 15px;
+    height: 100vh;
+    top: 17%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Carrossel de Quem Somos */
+.carrossel {
+    position:relative ;
+    width: 100%;
+    max-width: 1800px;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 22%;
+    
+}
+
+.carrossel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.slide {
+    flex: 0 0 calc(100% / 3);
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 5px;
+    
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+/* CARROSSEL DE SERVIÇOS */
+/* Container do carrossel */
+.carrossel-servicos {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+/* Inner com os slides alinhados em linha */
+.carrossel-inner-servicos {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Cada slide */
+.slide-servico {
+  flex: 0 0 calc(100% / 3);
+  box-sizing: border-box;
+  padding: 0 10px;
+  text-align: center;
+  max-width: 300px;
+}
+
+/* Faixa de título acima da imagem */
+.titulo-servico {
+  background-color: #494948a1;
+  color: white;
+  font-weight: bold;
+  padding: 10px 0;
+  font-size: 18px;
+  border-radius: 6px 6px 0 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+/* Imagem do serviço */
+.slide-servico img {
+  width: 100%;
+  height: 300px;
+  object-fit: fill;
+  border-radius: 0 0 6px 6px;
+  display: block;
+}
+
+/* Contato - formulário */
+#contato h1 {
+  margin: 90px 0 40px 0;
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;              
+    padding: 40px 20px;      
+    border-radius: 8px;
+    max-width: 600px;        
+    width: 100%;             
+}
+
+#contato label {
+    align-self: flex-start;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+    width: 100%;
+}
+
+#contato input,
+#contato textarea {
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;             
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#contato textarea {
+    resize: vertical;
+    min-height: 150px;
+    max-width: 100%;         
+}
+
+#contato button {
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 100%;
+    border: 2px solid #06f55e;
+    background: transparent;
+    color: #06f55e;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#contato button:hover{
+    background: #25D366;
+    color: #f4f4f4;
+}
+
+/* Depoimentos */
+#depoimentos h2 {
+  position: relative;
+  top: -10%;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.grade-depoimentos {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 500px;
+  margin: auto;
+  top: -10%;
+}
+
+.img-depoimento {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 10%;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease;
+}
+
+
+/* Posições específicas */
+.pos1 { top: -90px; left: 0; }
+.pos2 { top: -80px; right: 0; }
+.pos3 { bottom: 80px; left: 0; }
+.pos4 { bottom: 80px; right: 0; }
+.pos5 { bottom: -90px; left: 50%; transform: translateX(-50%); }
+
+/* Texto central */
+.texto-centro {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2.0rem;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.caixa-texto {
+  background: rgba(255, 255, 255, 0.1); /* branco transparente */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 1.5); /* sombra branca */
+  backdrop-filter: blur(6px); /* desfoque sutil */
+  color: #fff; /* texto branco */
+  max-width: 400px;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: white;
+  padding: 40px 20px;
+  box-shadow: 0 -40px 60px -30px rgba(255, 255, 255, 0.2);
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  max-width: 150px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  margin-bottom: 20px;
+}
+
+.footer-col h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.footer-col p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(1.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+
+.footer-map {
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+
+/* ----------- MEDIA QUERIES PARA RESPONSIVIDADE ----------- */
+
+/* Telas pequenas (celulares até 480px) */
+@media (max-width: 768px) {
+  #logo {
+    width: 60vw !important; /* Logo maior e proporcional */
+    max-width: 150px;
+    height: auto; /* Ajusta altura proporcional */
+  }
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Agora aparece em celulares */
+    }
+}
+/* Ajusta o menu para telas menores */
+@media (max-width: 768px) {
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 1px;
+        background:black;
+        opacity: 0.7;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Reduz o tamanho do texto */
+    .text1 {
+      
+        font-size: 10px;
+        text-align: center;
+        left: 10%;
+        top: 10%;
+        margin-bottom: 20px;
+    }
+
+    .seja {
+        font-size: 18px;
+        text-align: center;
+        left: auto;
+        top: 570px;
+        transform: none;
+        margin: 10px 0 20px 0;
+    }
+
+    /* Ajuste para fotos aparecerem corretamente */
+    .fotos-container {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 150px;
+        left: 55%;
+        top: 25%;
+    }
+
+    .foto {
+        width: 100px; /* Ajuste de tamanho */
+        border: 1px solid white;
+        box-shadow: 0 0 5px rgb(255, 255, 255);
+        position: flex;
+
+    }
+    
+    .foto1 {
+    top: -35px; 
+    left: -180px;
+    z-index: 10;
+    }
+
+    .foto2 { 
+        top: 145px; 
+        left: -180px; 
+        z-index: 11;
+    }
+
+    .foto3 {
+        top: 70px; 
+        left: -90px; 
+        z-index: 15;
+    }
+
+    .foto4 { 
+        top: -35px; 
+        left: 10px;
+        z-index: 16;
+    }
+
+    .foto5 {
+        top: 155px;
+        left: 10px; 
+        z-index: 13;
+    }
+}
+
+@media (max-width: 768px) {
+    #quem-somos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    }
+
+    .titulo {
+        position: absolute;
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        margin: 0;
+        top: -5%;
+    }
+
+    .txt2 {
+        color: white;
+        font-size: 15px;
+        height: 100vh;
+        top: 10%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .carrossel {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    overflow: hidden;
+    margin: auto;
+    top: 65%;
+    }
+
+    .carrossel-inner {
+        display: flex ;
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+    }
+
+    .slide {
+        flex: 0 0 calc(100% / 1);
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0 5px;
+        max-width: 400px;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        object-fit:contain;
+        border-radius: 6px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #servicos h2 {
+    font-size: 40px;
+  }
+
+  #servicos p {
+    font-size: 20px !important;
+
+  }
+
+  .slide-servico {
+    flex: 0 0 100%;
+    max-width: 100%;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    padding: 10px 0;
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  #depoimentos h2 {
+    position: static;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .grade-depoimentos {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: nowrap;
+  }
+
+  .texto-centro {
+    position: relative;
+    transform: none;
+    max-width: 100%;
+    font-size: 1.6rem;
+    line-height: 1.9;
+    text-align: center;
+     /* Coloca a caixa de texto primeiro */
+  }
+
+  .caixa-texto {
+    position: relative;
+    max-width: 90%;
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    left: -6%;
+    order: 1;
+  }
+
+  .img-depoimento {
+  width: 180px !important;
+  height: 180px !important;
+  display: none;
+  position: static;
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  order: 2;
+  margin: 0 5px;
+  }
+
+  /* Exibe apenas as 3 imagens desejadas */
+  .img-depoimento.pos1,
+  .img-depoimento.pos2,
+  .img-depoimento.pos3 {
+    display: block;
+  }
+
+  .img-depoimento.pos1,
+.img-depoimento.pos2,
+.img-depoimento.pos3 {
+  flex: 1 1 30%;
+  margin: 0 5px;
+}
+
+  .grade-depoimentos {
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+}
+
+  /* Seções com altura fixa para evitar overflow */
+  #inicio, #quem-somos, #servicos, #depoimentos, #contato {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 10px;
+    flex-direction: column !important; /* Flex em coluna para empilhar */
+  } 
+ 
+  /* Formulário contato - 100% largura e padding menor */
+  #contato form {
+    max-width: 100% !important;
+    padding: 20px 10px !important;
+  }
+
+  #contato h1 {
+    font-size: 2rem !important;
+    margin: 40px 0 20px 0 !important;
+  }
+
+  /* Footer - empilhar colunas */
+  .footer-container {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .footer-col {
+    min-width: auto !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+/* Telas médias (tablets) até 768px */
+@media (max-width: 768px) {
+
+  /* Contato */
+  #contato form {
+    max-width: 90% !important;
+    padding: 30px 20px !important;
+  }
+
+  #contato h1 {
+    font-size: 2.5rem !important;
+  }
+
+}
