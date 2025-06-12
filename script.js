@@ -98,7 +98,7 @@ document.getElementById("form-whatsapp").addEventListener("submit", function(e) 
     const titulo = document.getElementById("titulo").value;
     const mensagem = document.getElementById("mensagem").value;
 
-    const texto = `*Novo Contato do Site:*\n\n*Nome:* ${nome}\n*Telefone:* ${telefone}\n*Título:* ${titulo}\n*Mensagem:* ${mensagem}`;
+    const texto = `*Novo orcamento do Site:*\n\n*Nome:* ${nome}\n*Telefone:* ${telefone}\n*Título:* ${titulo}\n*Mensagem:* ${mensagem}`;
 
     const numero = "5561984084390"; // Seu número WhatsApp
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
