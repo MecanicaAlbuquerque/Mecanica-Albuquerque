@@ -640,6 +640,7 @@ footer {
         left: 10%;
         top: 10%;
         margin-bottom: 20px;
+        display: relative;
     }
 
     .seja {
@@ -649,12 +650,13 @@ footer {
         top: 570px;
         transform: none;
         margin: 10px 0 20px 0;
+        display: relative;
     }
 
     /* Ajuste para fotos aparecerem corretamente */
     .fotos-container {
         position: absolute;
-        display: flex;
+        display: relative;
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
@@ -668,6 +670,7 @@ footer {
         border: 1px solid white;
         box-shadow: 0 0 5px rgb(255, 255, 255);
         position: flex;
+        display: relative;
 
     }
     
