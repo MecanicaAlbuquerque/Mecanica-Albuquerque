@@ -604,6 +604,31 @@ footer {
     max-width: 100vw;
 }
 
+.seta-esquerda, .seta-direita {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seta-esquerda:hover, .seta-direita:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.seta-esquerda { left: 100px; }
+.seta-direita { right: 100px; }
+
+
 /* ----------- MEDIA QUERIES PARA RESPONSIVIDADE ----------- */
 
 /* Telas pequenas (celulares até 480px) */
