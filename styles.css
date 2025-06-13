@@ -179,7 +179,7 @@ nav {
     display: flex;
     justify-content: center; /* Centraliza todo o menu */
     width: 100%; /* Garante que ocupe toda a largura */
-    position: absolute;
+    position: relative;
 }
 
 nav ul {
@@ -597,7 +597,6 @@ footer {
 body {
   overflow-x: hidden;
 }
-
 
 
 /* ----------- MEDIA QUERIES PARA RESPONSIVIDADE ----------- */
