@@ -7,6 +7,9 @@ html, body {
     width: 100%;
   height: 100%;
 }
+body{
+  overflow: hidden;
+}
 
 html {
   scroll-behavior: smooth;
@@ -65,13 +68,15 @@ html {
 #inicio {
     background: url('./imagens/fundo.jpeg') no-repeat center center fixed;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     filter: brightness(80%);
-    z-index: 0;
+    z-index: auto;
+    position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
    
 }
 
@@ -86,7 +91,7 @@ html {
 #servicos {
     background: url('./imagens/fundo.jpeg') no-repeat center center fixed;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     filter: brightness(80%);
     z-index: -3;
     padding: 40px 20px;
@@ -133,7 +138,7 @@ html {
     padding: 60px 20px;
     background: url('./imagens/fundo.jpeg') no-repeat center center fixed;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     flex-direction: column;
     color: white;
     height: 100vh;
