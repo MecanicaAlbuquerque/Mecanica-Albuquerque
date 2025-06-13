@@ -146,3 +146,10 @@ document.addEventListener("DOMContentLoaded", function() {
     setaEsquerda.addEventListener("click", () => moverCarrossel(-1));
     setaDireita.addEventListener("click", () => moverCarrossel(1));
 });
+document.addEventListener("touchmove", function(event) {
+    if (event.touches.length === 1) {
+        if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
+            event.preventDefault();
+        }
+    }
+}, { passive: false });
