@@ -15,7 +15,7 @@ html {
 
 /* Intro */
 #intro {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;   /* 100% da largura da viewport */
@@ -50,7 +50,7 @@ html {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 100;
+    z-index: 100000;
 }
 
 .menu-toggle span {
@@ -153,7 +153,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 0;
     z-index: 2;
@@ -209,6 +209,7 @@ nav ul li a:hover {
   right: 20px;
   top: 30px;
   margin-right: 20px;
+  z-index: 100000;
 }
 
 .whatsapp a {
