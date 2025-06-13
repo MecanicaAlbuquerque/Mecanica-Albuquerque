@@ -28,9 +28,6 @@ html {
     z-index: 9999;
     margin: 0;
     padding: 0;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 1s ease, visibility 1s ease;
 }
 
 #logo {
@@ -72,11 +69,11 @@ html {
     background-attachment: fixed;
     filter: brightness(80%);
     z-index: 0;
-    position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 #quem-somos{
@@ -594,7 +591,6 @@ footer {
 }
 
 
-
 /* ----------- MEDIA QUERIES PARA RESPONSIVIDADE ----------- */
 
 /* Telas pequenas (celulares até 480px) */
@@ -646,7 +642,6 @@ footer {
         top: 10%;
         margin-bottom: 20px;
         display: relative;
-        position: absolute;
     }
 
     .seja {
@@ -657,7 +652,6 @@ footer {
         transform: none;
         margin: 10px 0 20px 0;
         display: relative;
-        position: absolute;
     }
 
     /* Ajuste para fotos aparecerem corretamente */
@@ -676,7 +670,7 @@ footer {
         width: 100px; /* Ajuste de tamanho */
         border: 1px solid white;
         box-shadow: 0 0 5px rgb(255, 255, 255);
-        position: absolute;
+        position: flex;
         display: relative;
 
     }
@@ -685,35 +679,30 @@ footer {
     top: -35px; 
     left: -180px;
     z-index: 10;
-    position: absolute;
     }
 
     .foto2 { 
         top: 145px; 
         left: -180px; 
         z-index: 11;
-        position: absolute;
     }
 
     .foto3 {
         top: 70px; 
         left: -90px; 
         z-index: 15;
-        position: absolute;
     }
 
     .foto4 { 
         top: -35px; 
         left: 10px;
         z-index: 16;
-        position: absolute;
     }
 
     .foto5 {
         top: 155px;
         left: 10px; 
         z-index: 13;
-        position: absolute;
     }
 }
 
