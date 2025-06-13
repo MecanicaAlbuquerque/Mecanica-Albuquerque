@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("scroll", function() {
     window.scrollTo(0, window.scrollY);
-});
+    });
+
 
     // Carrossel Quem Somos (exemplo já existente)
     const carrosselInner = document.querySelector(".carrossel-inner");
@@ -133,3 +134,8 @@ window.addEventListener('scroll', () => {
     elementos.forEach(el => el.style.display = 'block');
   }
 });
+document.addEventListener("touchstart", function(event) {
+    if (event.touches.length === 1) {
+        event.preventDefault();
+    }
+}, { passive: false });
