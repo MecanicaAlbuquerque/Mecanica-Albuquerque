@@ -68,12 +68,12 @@ html {
     background-size: cover;
     background-attachment: fixed;
     filter: brightness(80%);
-    z-index: 0;
+    z-index: -3;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    position: relative;
 }
 
 #quem-somos{
@@ -233,7 +233,7 @@ nav ul li a:hover {
     font-size: 18px;
     text-align: center;
     color: white;
-    position: fixed; 
+    position: absolute; 
     left: 8%;
     top: 15%;
     line-height: 1.4;
@@ -242,7 +242,7 @@ nav ul li a:hover {
 .seja {
     font-size: 25px;
     color: white;
-    position: fixed;
+    position: absolute;
     left: 25%;
     top: 90%;
     transform: translateY(-50%);
@@ -250,7 +250,7 @@ nav ul li a:hover {
 }
 
 .fotos-container {
-    position: fixed;
+    position: absolute;
     right: 10%;
     top: 30%;
     width: 130px;
@@ -589,6 +589,15 @@ footer {
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 
 
 /* ----------- MEDIA QUERIES PARA RESPONSIVIDADE ----------- */
