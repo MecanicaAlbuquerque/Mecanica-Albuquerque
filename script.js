@@ -111,3 +111,17 @@ const navMenu = document.querySelector(".nav-menu");
 menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+
+  const inicioHeight = document.getElementById("inicio").offsetHeight;
+
+  const elementos = document.querySelectorAll('.text1, .seja, .fotos-container');
+
+  if (scrollY > inicioHeight - 100) {
+    elementos.forEach(el => el.style.display = 'none');
+  } else {
+    elementos.forEach(el => el.style.display = 'block');
+  }
+});
