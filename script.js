@@ -119,7 +119,7 @@ window.addEventListener('scroll', () => {
 
   const elementos = document.querySelectorAll('.text1, .seja, .fotos-container');
 
-  if (scrollY > inicioHeight - 100) {
+  if (scrollY > inicioHeight * 0.7) {
     elementos.forEach(el => el.style.display = 'none');
   } else {
     elementos.forEach(el => el.style.display = 'block');
