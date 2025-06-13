@@ -21,6 +21,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
+* {
+    outline: 2px solid red;
+}
 
 
 /* Intro */
