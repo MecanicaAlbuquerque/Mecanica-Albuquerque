@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     font-family: Arial, sans-serif;
     font-size: 1rem;
-    overflow: hidden;
+    overflow: auto;
     overflow-x: hidden;
     max-width: 100%;
     width: 100%;
