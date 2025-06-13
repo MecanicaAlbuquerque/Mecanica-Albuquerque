@@ -212,6 +212,7 @@ nav ul li a:hover {
   top: 30px;
   margin-right: 20px;
   z-index: 99999;
+  pointer-events: auto;
 }
 
 .whatsapp a {
