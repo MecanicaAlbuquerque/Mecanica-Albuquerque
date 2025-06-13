@@ -60,10 +60,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Carrossel de Serviços (novo)
     const carrosselInnerServicos = document.querySelector(".carrossel-inner-servicos");
     const slidesServicos = document.querySelectorAll(".slide-servico");
-    const bolinhas = document.querySelectorAll(".botoes-carrossel .bolinha");
+    
 
-    if (carrosselInnerServicos && slidesServicos.length && bolinhas.length) {
-        let indexServicos = 0;
+
 
         function getSlidesToShow() {
             return window.innerWidth <= 768 ? 1 : 3;
@@ -80,22 +79,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
             carrosselInnerServicos.style.transform = `translateX(-${indexServicos * slideWidth}px)`;
 
-            bolinhas.forEach((b, i) => b.classList.toggle("ativa", i === indexServicos));
+            
         }
 
         let intervalo = setInterval(() => atualizarCarrossel(), 5000);
 
-        bolinhas.forEach((bolinha, i) => {
-            bolinha.addEventListener("click", () => {
-                clearInterval(intervalo);
-                atualizarCarrossel(i);
-                intervalo = setInterval(() => atualizarCarrossel(), 5000);
-            });
-        });
-
-        window.addEventListener("resize", () => atualizarCarrossel(indexServicos));
-        window.addEventListener("load", () => atualizarCarrossel(0));
-    }
 });
 
 // Formulário WhatsApp
@@ -135,3 +123,26 @@ window.addEventListener('scroll', () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const carrosselInner = document.querySelector(".carrossel-inner-servicos");
+    const setaEsquerda = document.querySelector(".seta-esquerda");
+    const setaDireita = document.querySelector(".seta-direita");
+    const slides = document.querySelectorAll(".slide-servico");
+
+    let index = 0;
+    const slidesToShow = window.innerWidth <= 768 ? 1 : 3;
+    const totalSlides = slides.length;
+
+    function moverCarrossel(direcao) {
+        const slideWidth = carrosselInner.offsetWidth / slidesToShow;
+        index += direcao;
+
+        if (index < 0) index = totalSlides - slidesToShow;
+        if (index > totalSlides - slidesToShow) index = 0;
+
+        carrosselInner.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
+
+    setaEsquerda.addEventListener("click", () => moverCarrossel(-1));
+    setaDireita.addEventListener("click", () => moverCarrossel(1));
+});
