@@ -833,6 +833,17 @@ footer {
 
 }
 
+@media (max-width: 768px) {
+    .seta-esquerda, .seta-direita {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .seta-esquerda { left: 5px; }
+    .seta-direita { right: 5px; }
+}
+
 
 @media screen and (max-width: 768px) {
   #depoimentos h2 {
