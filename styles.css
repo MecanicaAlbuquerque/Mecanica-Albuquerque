@@ -229,7 +229,7 @@ nav ul li a:hover {
 
 /* Texto e fotos no início */
 .text1 {
-    font-size: 18px;
+    font-size: 13px;
     text-align: center;
     color: white;
     position: absolute; 
@@ -239,10 +239,10 @@ nav ul li a:hover {
 }
 
 .seja {
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     position: absolute;
-    left: 25%;
+    left: 20%;
     top: 90%;
     transform: translateY(-50%);
     text-align: left;
@@ -250,14 +250,14 @@ nav ul li a:hover {
 
 .fotos-container {
     position: absolute;
-    right: 10%;
-    top: 30%;
-    width: 130px;
+    right: 20%;
+    top: 25%;
+    width: 50px;
 }
 
 .foto {
     position: absolute;
-    width: 200px;
+    width: 180px;
     border: 2px solid white;
     box-shadow: 0px 0px 5px rgb(255, 255, 255);
 }
@@ -326,11 +326,11 @@ nav ul li a:hover {
 .carrossel {
     position:relative ;
     width: 100%;
-    max-width: 1800px;
+    max-width: 1000px;
     height: auto;
     overflow: hidden;
     margin: auto;
-    margin-top: 22%;
+    margin-top: 25%;
     
 }
 
@@ -407,22 +407,23 @@ nav ul li a:hover {
 
 /* Contato - formulário */
 #orcamento h1 {
-  margin: 90px 0 40px 0;
   font-size: 3rem;
   text-align: center;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 #orcamento form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-    gap: 10px;              
+    margin: 10px auto 0 auto;
+    gap: 5px;              
     padding: 40px 20px;      
     border-radius: 8px;
-    max-width: 600px;        
-    width: 100%;             
+    max-width: 400px;        
+    width: 100%;  
+              
 }
 
 #orcamento label {
@@ -474,21 +475,21 @@ nav ul li a:hover {
   top: -10%;
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
 }
 
 .grade-depoimentos {
   position: relative;
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   min-height: 500px;
   margin: auto;
-  top: -10%;
+  top: 10%;
 }
 
 .img-depoimento {
   position: absolute;
-  width: 250px;
+  width: 200px;
   height: 250px;
   object-fit: contain;
   border-radius: 10%;
@@ -502,16 +503,16 @@ nav ul li a:hover {
 .pos2 { top: -80px; right: 0; }
 .pos3 { bottom: 80px; left: 0; }
 .pos4 { bottom: 80px; right: 0; }
-.pos5 { bottom: -90px; left: 50%; transform: translateX(-50%); }
+.pos5 { bottom: 15%; left: 50%; transform: translateX(-50%); }
 
 /* Texto central */
 .texto-centro {
   position: absolute;
-  top: 30%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 2.0rem;
+  font-size: 1rem;
   line-height: 1.6;
   max-width: 400px;
 }
