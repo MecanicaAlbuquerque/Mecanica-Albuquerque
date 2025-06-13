@@ -25,7 +25,11 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(removerIntro, 7000);
     document.addEventListener("click", removerIntro, { once: true });
     document.addEventListener("wheel", removerIntro, { once: true });
-    document.addEventListener("touchmove", removerIntro, { once: true });
+    document.addEventListener("touchmove", function(event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+}, { passive: false });
 
     // Carrossel Quem Somos (exemplo já existente)
     const carrosselInner = document.querySelector(".carrossel-inner");
